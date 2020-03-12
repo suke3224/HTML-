@@ -1,0 +1,550 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="ico.ico" type="image/x-icon"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+<meta charset="utf-8">
+<meta name="Keywords" content="图片,生活"> 
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<style type="text/css">
+  body{
+    margin: 0;
+    padding: 0;
+  }
+  .container{
+    width: 100%;
+    margin: 0 auto;		
+  }
+  .left{
+    background: #00ffff;
+  }
+  .right{
+    background: rgb(0, 255, 191);
+  }
+  .center{
+    width: 100%;
+    font-size: 0;
+  }
+  .red{
+    background: rgb(208, 255, 0);
+    box-sizing: border-box;
+    border: gray 5px solid;
+  }
+  .chengse{
+    background: rgb(1, 217, 255);
+    box-sizing: border-box;
+    border: gray 5px solid;
+  }
+  .black{
+    background: #00fd69c0;
+    box-sizing: border-box;
+    border: gray 5px solid;
+  }
+  @media (min-width:960px) {
+    .container{
+      width: 960px;
+    }
+    .left{
+      width: 20%;
+      height: 300px;
+      display: inline-block;
+    }
+    .right{
+      width: 15%;
+      height: 300px;
+      display: inline-block;
+    }
+    .center{
+      width: 55%;
+      height: 300px;
+      display: inline-block;
+    }
+    .red{
+      width: 100%;
+      height: 33.3%;
+      display: inline-block;
+    }
+    .chengse{
+      width: 25%;
+      height: 33.3%;
+      display: inline-block;
+    }
+    .black{
+      width: 50%;
+      height: 33.3%;
+      display: inline-block;
+    }
+  }
+  @media (min-width:768px) and (max-width:960px){
+    .container{
+      width: 960px;
+      margin: 0 auto;
+    }
+    .left{
+      width: 15%;
+      height: 70px;
+      display: inline-block;
+    }
+    .right{
+      width: 20%;
+      height: 70px;
+      display: inline-block;
+    }
+    .center{
+      width: 55%;
+      height: 70px;
+      display: inline-block;
+    }
+    .red,.chengse,.black{
+      width: 100%;
+      height: 70px
+    }
+  }
+  @media (max-width:768px) {
+    .container{
+      width: 960px;
+      margin: 0 auto;
+    }
+    .left,.right,.center{
+      width: 100%;
+      height: 50px;
+    }
+    .red,.chengse,.black{
+      width: 100%;
+      height: 50px;
+      border: gray 3px solid;
+    }
+  }
+			body{
+				margin: 0px;
+			}
+			.zhezhao{
+				position: fixed;
+				left: 0px;
+				top: 0px;
+				background: #000;
+				width: 100%;
+				height: 100%;
+				opacity: 0.5;
+			}
+			.tankuang{
+				position: relative;
+				background: #fff;
+				width: 50%;
+				height: 80%;
+				border-radius: 5px;
+				margin: 5% auto;
+			}
+			#header{
+				height: 40px;
+			}
+			#header-right{
+				position: absolute;
+				width: 25px;
+				height: 25px;
+				border-radius: 5px;
+				background: red;
+				color: #fff;
+				right: 5px;
+				top: 5px;
+				text-align: center;
+			}
+                        
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	min-width:620px;
+}
+#header,#footer{
+	clear:both;
+	padding:10px;
+	text-align:center;
+
+}
+#left,
+#right{
+	float:left;
+	width:50%;
+	margin:0 0 0 -151px;
+}
+#innerLeft,
+#innerRight{
+	margin:0 0 0 151px;
+	background-color:#efefef;
+}
+#middle{
+	float:left;
+	width:300px;
+	background-color:#ccc;
+}
+.inner {
+	padding:12px;
+}
+.h1{
+color:green
+font-family：华文行楷
+}
+
+            body { height: 500px; }
+            #test { position: fixed; top: 30%; right: 0%; width: 200px; height: 120px; background-color: skyblue; }
+		   
+                   weather { 
+	background: url(website/images/weather.jpg) no-repeat;width:250px; 
+	height: 88px; 
+	margin: 10px 2px 10px 6px;
+	padding: 20px 2px 2px 65px; 
+}
+
+<!-- 
+BODY {
+scrollbar-face-color:#99CC33;//(立体滚动条凸出部分的颜色) 
+scrollbar-highlight-color:#A8CBF1;//(滚动条空白部分的颜色) 
+scrollbar-shadow-color:#A8CBF1;//(立体滚动条阴影的颜色) 
+scrollbar-arrow-color:#FF9966;//(上下按钮上三角箭头的颜色) 
+scrollbar-base-color:#A8CBF1; //(滚动条的基本颜色) 
+scrollbar-darkshadow-color:#A8CBF1; //(立体滚动条强阴影的颜色)
+scrollbar-track-color:#99CC33;
+scrollbar-3dlight-color:#A8CBF1; 
+} 
+-->
+
+                </style>
+<cite>
+	<title>suke</title>
+        </cite>
+</head>
+<body bgcolor=#FAFAD2 onselectstart="return false"><b>
+    <!--[if lte IE 7]>
+    <div style="position:absolute;top:0;left:0;bottom:0;z-index:1000;width:100%;height:100%;text-align:center;line-height:30px;background:#E7E7E7;color:#E44B0F;padding-bottom:100px">
+        <div style="width:675px;height:453px;margin:50px auto 0;">
+            <h1 style="margin-bottom: 40px;font-size: 22px;text-align: center;">你用的浏览器都已经是古董级的了，它出生那会儿...</h1>
+            <img width="540" height="177" src="/source/images/ie6-tips.jpg" alt="ie6tips" style="display: block;margin: 0 auto;" />
+            <h2 style="font-size: 26px;margin:50px 0 12px ">建议你</h2>
+            <div class="broswer">
+                <a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" target="_blank" style="display: block;width: 170px;margin: 0 auto;padding:10px 0;color:#fff;background-color:#0F9CE4;font-size: 20px;">升级IE浏览器</a>
+            </div>
+        </div>
+    </div>
+<![endif]-->
+
+<!--[if lte IE 8]>
+    <marquee  direction="left"  behavior="scroll"  scrollamount="25"  loop="-1"  bgcolor="pink"  hspace="90"   vspace="50">	
+<font  face="隶书"  color="red"  size="5">您的浏览器稍有老旧...
+我们建议您下载 Google Chorme 或Firefox</font>
+</marquee>
+<![endif]-->
+<div>
+<font b face="手书体">
+<div style="color:#0F0">
+<center><b><h1><font color="#FF0000">素</font><font color="#BF0040">客</font><font color="#7F0080">主</font><font color="#3F00C0">页</font></h1></b></center><br/>
+<hr/>
+<div style="background-color:#00C0FF;" height="100">
+&nbsp&nbsp<a href="https://www.baidu.com" target="_blank">百度</a>	
+<font color="#00E0FF">
+&nbsp&nbsp<a href="https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_pc_1" target="_blank">抗疫专题</a>
+</font>
+<hr>
+</div>
+
+        <div>
+        <font color="#000000">
+<DIV id="header">
+<DIV id="left">
+<DIV id="innerLeft" class="inner">
+<P><STRONG>时间</STRONG><div><h3><b>现在是<div id="times">
+	<script type="text/javascript">
+		function getNowTime(){
+			//当前时间
+			var date=new Date();
+			//格式化时间
+			var localedata=date.toLocaleString();
+			//获取div标签
+			var divtime=document.getElementById("times");
+			//写入内容
+			divtime.innerHTML=localedata;
+		}
+		//利用定时器,动态刷新时间
+		setInterval("getNowTime()",1000);
+	</script>
+	</h3></b>
+	</div>  </P></DIV></DIV>
+<DIV id="middle">
+<DIV id="innerMiddle" class="inner">
+<P><STRONG>suke</STRONG>
+</P></DIV>
+</DIV>
+<DIV id="right">
+<DIV id="innerRight" class="inner">
+<P><STRONG>今日天气</STRONG><div class="weather">
+   <iframe width="200" scrolling="no" height="65" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&icon=1&num=1">
+   </iframe>
+ </div></P></DIV></DIV>
+</font>
+        </div>
+	        <div id="test"><b><font color="black">
+			<center><b>小提示</center>
+            素客网站大部分功能可以在
+            上部导航工具栏找到,
+<hr>
+<form action="https://www.baidu.com/s">
+    <input type="text" name="wd"><input type="submit" value="百度一下">
+    </form>
+    请选择一个颜色：<input type="color">
+                        </font>
+                        </b>
+        </div>
+<div>
+<div>
+<b>
+<br/>
+<center>
+<font color="#FAFAD2">
+<h6>suke</h6>
+</font>
+&nbsp&nbsp<a href="https://www.baidu.com" target="_blank">百度</a>	
+&nbsp&nbsp<a href="https://www.baidu.com" target="_blank">百度</a>	
+&nbsp&nbsp<a href="https://www.cmdy5.com" target="_blank">草民电网</a>	
+&nbsp&nbsp<a href="https://www.gov.com" target="_blank">中国政府网</a>	
+&nbsp&nbsp<a href="https://www.baidu.wenku.com" target="_blank">文库</a>	
+&nbsp&nbsp<a href="https://www.zhihu.com/signin?next=%2F" target="_blank">知乎</a>	
+&nbsp&nbsp<a href="https://weibo.com/" target="_blank">微博</a>	
+&nbsp&nbsp<a href="https://cloud.189.cn/" target="_blank">天翼云盘</a>	
+&nbsp&nbsp<a href="https://fanyi.baidu.com" target="_blank">百度翻译</a>	
+&nbsp&nbsp<a href="https://www.iqiyi.com" target="_blank"></a>	
+&nbsp&nbsp<a href="https://mail.qq.com/" target="_blank">QQ邮箱</a>
+&nbsp&nbsp<a href="https://f.wps.cn/form-write/EwnqruHV/ 邀你填写「关于素客网站满意度调查」" target="_blank">关于网站的评价</a>	
+&nbsp&nbsp<a href="https://www.kugou.com" target="_blank">酷狗音乐</a>	
+&nbsp&nbsp<a href="https：//cn.bing.com" target="_blank">bing（必应中国）</a>	
+&nbsp&nbsp<a href="Internet.html"  target="_Blank">网址导航</a>
+&nbsp&nbsp<a href="https://www.tv.cctv.com/live/cctv1"  target="_Blank">CCTV直播</a>
+&nbsp&nbsp<a href="http://www.sohu.com/  target="_Blank">搜狐</a>
+&nbsp&nbsp<a href="https://map.baidu.com/"  target="_Blank">百度地图</a>
+&nbsp&nbsp<a href="https://www.iqiyi.com/"  target="_Blank">爱奇艺</a><wbr/>
+&nbsp&nbsp<a href="https://www.qq.com/"  target="_Blank">腾讯</a>
+&nbsp&nbsp<a href="https://www.jd.com/"  target="_Blank">京东</a>
+&nbsp&nbsp<a href="https://www.suning.com/"  target="_Blank">苏宁易购</a>
+&nbsp&nbsp<a href="https://www.taobao.com/"  target="_Blank">淘宝网</a>
+&nbsp&nbsp<a href="https://mos.m.taobao.com/union/jhsjx2020?pid=mm_43125636_4246598_109944300468"  target="_Blank">聚划算</a>
+&nbsp&nbsp<a href="https://www.douban.com/"  target="_Blank">豆瓣</a>
+&nbsp&nbsp<a href="https://www.ximalaya.com/"  target="_Blank">喜马拉雅FM</a>
+&nbsp&nbsp<a href="https://www.12306.cn/index/"  target="_Blank">12306</a>
+&nbsp&nbsp<a href="http://www.eastmoney.com/"  target="_Blank">东方财富网</a>
+&nbsp&nbsp<a href="http://www.icbc.com.cn/icbc/"  target="_Blank">工商银行</a>
+&nbsp&nbsp<a href="https://mp4tomp3.org/"  target="_Blank">在线免费视频转换音频</a>
+&nbsp&nbsp<a href="https://news.baidu.com/"  target="_Blank">百度新闻</a>
+&nbsp&nbsp<a href="https://www.uupoop.com/"  target="_Blank">在线Ps</a>
+&nbsp&nbsp<a href="http://www.bejson.com/convert/video2audio/"  target="_Blank">在线转换MP4</a>
+&nbsp&nbsp<a href="https://bilibili.clipchamp.com/editor/export"  target="_Blank">在线视频编辑器</a>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+<br/>
+<center>
+<h3>suke工作室产品</h3>
+</center>
+&nbsp&nbsp<a href="website/travel/index.html"  target="_Blank">旅行官网</a>
+<a href="https://f.wps.cn/form-write/EwnqruHV/ 邀你填写「关于素客网站满意度调查」" target="_blank">关于网站的评价</a>
+&nbsp&nbsp<a href="website/joke.html"  target="_Blank">验证码</a>
+&nbsp&nbsp<a href="travel/index.html"  target="_Blank">旅行官网（试行）</a>
+&nbsp&nbsp<a href="website/lost.html"  target="_Blank">迷宫小游戏</a>
+&nbsp&nbsp<a href="login.html"  target="_Blank">登录界面</a>
+&nbsp&nbsp<a href="website/gx.html"  target="_Blank">更新界面</a>
+&nbsp&nbsp<a href="website/reader.html"  target="_Blank">suke每日阅读</a>
+&nbsp&nbsp<a href="jump.html"  target="_Blank">跳转刷新</a>
+&nbsp&nbsp<a href="Internet.html">刷新</a>
+&nbsp&nbsp<a href="website/east.html"  target="_Blank">阅读</a>
+&nbsp&nbsp<a href="website/bb.html"  target="_Blank">高级Privert</a>
+&nbsp&nbsp<a href="website/calc.html"  target="_Blank">在线计算器</a>
+&nbsp&nbsp<a href="website/cfw.html"  target="_Blank">suke小家</a>
+&nbsp&nbsp<a href="website/clock.html"  target="_Blank">屏幕时钟</a><wbr/>
+&nbsp&nbsp<a href="website/map.html"  target="_Blank">百度API地图</a>
+&nbsp&nbsp<a href="website/photo.html"  target="_Blank">图片精选</a>
+&nbsp&nbsp<a href="website/video.html"  target="_Blank">视频推荐</a>
+&nbsp&nbsp<a href="website/text.html"  target="_Blank">创作专区</a>
+&nbsp&nbsp<a href="website/music.html"  target="_Blank">音乐专区</a>
+&nbsp&nbsp<a href="website/flase.html"  target="_Blank">模拟系统更新</a>
+&nbsp&nbsp<a href="website/bdjs.html"  target="_Blank">本地文件检索器</a>
+&nbsp&nbsp<a href="website/index.html"  target="_Blank">试验场</a>
+&nbsp&nbsp<a href="website/credits.html"  target="_Blank">credits</a>
+&nbsp&nbsp<a href="website/gf.html"  target="_Blank">新功能实验室</a>
+&nbsp&nbsp<a href="website/calendar.html"  target="_Blank">网页版日历</a>
+&nbsp&nbsp<a href="website/news.html"  target="_Blank">新闻</a>
+&nbsp&nbsp<a href="website/ip.html"  target="_Blank">flash动画库</a>
+&nbsp&nbsp<a href="website/jsq.html"  target="_Blank">计算器</a>
+&nbsp&nbsp<a href="website/about.html"  target="_Blank">关于我们</a>
+&nbsp&nbsp<a href="website/hkdg.html"  target="_Blank">黑客帝国代码装逼</a>
+&nbsp&nbsp<a href="website/cxjs.html"  target="_Blank">我们推送</a>
+&nbsp&nbsp<a href="website/Exlce.html"  target="_Blank">在线表格</a>
+&nbsp&nbsp<a href="website/sm.html"  target="_Blank">关于素客网站的声明</a>
+&nbsp&nbsp<a href="website/zmdl.html"  target="_Blank">关于黑客帝国效果</a>
+&nbsp&nbsp<a href="website/ask.html"  target="_Blank">回答机器人</a>
+&nbsp&nbsp<a href="website/mp4-mp3.html"  target="_Blank">MP4‐MP3</a>
+&nbsp&nbsp<a href="website/ck.html"  target="_Blank">窗口</a>
+&nbsp&nbsp<a href="website/dy.html"  target="_Blank">阅读打印</a>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+&nbsp&nbsp<a href=""  target="_Blank"></a><br>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+&nbsp&nbsp<a href=""  target="_Blank"></a>
+<a href=""></a>
+</center>
+<br/>
+<center>
+</b>
+</div>
+<br/>
+<br/>
+<div>
+<b>
+<br/>
+<br/>
+
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+#calendar{
+	background-color: #fff;
+	width: 200px;
+	height: 190px;
+	border-radius: 10px;
+	overflow: hidden;
+	margin: 100px auto;
+	text-align: center;
+}
+#calendar .yearMon{
+	background-color: #ddd;
+	padding: 5px 0;
+}
+#calendar .date{
+	color: #0099FF;
+	font-size: 96px;
+	font-weight: bold;
+}
+</style>
+<script>
+
+$(function(){
+	// 获取时间
+	var nowDate = new Date();     
+	var year = nowDate.getFullYear();    
+	var month = nowDate.getMonth() + 1 < 10 ? "0" + (nowDate.getMonth() + 1) : nowDate.getMonth() + 1;    
+	var date = nowDate.getDate() < 10 ? "0" + nowDate.getDate() : nowDate.getDate();
+	var week = "星期" + "日一二三四五六".split(/(?!\b)/)[nowDate.getDay()];
+	// 添加文本内容到相应的div
+	$(".yearMon").text(year+"年"+month+"月");
+	$(".date").text(date);
+	$(".week").text(week);
+});a
+
+</script>
+<div class="container">
+  <div class="left">在线小游戏【推荐】<br>
+    <a href="website/lost.html"  target="_Blank">迷宫小游戏</a><br>
+    <a href="https://www.html5tricks.com/demo/html5-canvas-sin/index.html"  target="_Blank">在线动画（波长）</a><br>
+    <a href="https://www.html5tricks.com/demo/webgl-water/index.html"  target="_Blank">3D互动</a><br>
+    <a href="https://www.html5tricks.com/demo/html5-whale/index.html"  target="_Blank">鲸鱼（有点无聊）</a><br>
+    <a href="https://www.html5tricks.com/demo/html5-3d-cloth/index.html"  target="_Blank">飘动衣服</a><br>
+    <a href="https://www.html5tricks.com/demo/html5-canvas-magic-effect/index.html"  target="_Blank">星星</a><br>
+    <a href=""  target="_Blank"></a><br>
+    <a href=""  target="_Blank"></a><br>
+    <a href=""  target="_Blank"></a><br>
+    <a href=""  target="_Blank"></a><br>
+
+  </div>
+  <div class="center">
+    <div class="red">您好</div>
+    <div class="chengse">哦哦好</div>
+    <div class="chengse">azdxfgc</div>
+    <div class="black">zxdcfvb</div>
+    <div class="black">Zxcvb</div>
+    <div class="chengse">sdfgvbn</div>
+    <div class="chengse">sdfg</div>
+  </div>
+  <div class="right">c</div>
+</div>
+<div style="background-color:#CCCCCC;" height="50">
+<div>
+<b>
+<center>
+<br/>
+<div width=200 height=50  color:"#E6E6FA">
+<button type="button" onclick="dianwo()">关于我们</button>
+		<div class="zhezhao" id='zhezhao'>
+			<div class="tankuang">
+				<div id="header">
+					<span><h3><font color="#FF0000">关</font><font color="#D5002A">于</font><font color="#AB0054">素</font><font color="#81007E">客</font><font color="#5700A8">网</font><font color="#2D00D2">站</font></h3>
+
+您好，欢迎访问本网站<br/>
+由于本网站还处于开发状态，<br/>
+所以您的宝贵意见对于我们来说都是支持。<br/>
+欢迎评论，评价。<br/>
+评价的标签在顶部的导航连接中，<br/>
+您的宝贵意见我们会第一时间采纳<br/>
+如有更新，请在顶部导航栏内找到suke更新<br/>
+更新完后请刷新页面<br/>
+如果您的页面无法加载“地图”和“视频”项目<br/>
+那么请下载Google Chorme 或FireFox<br/>
+如页面加载不出，请刷新。<br/>
+如果您的页面加载错误，
+请允许加载控件。
+谢谢
+</span>
+					<div id="header-right" onclick="hidder()">x</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			document.getElementById('zhezhao').style.display="none";
+			function dianwo(){
+				document.getElementById('zhezhao').style.display="";
+			}
+			function hidder(){
+				document.getElementById('zhezhao').style.display="none";
+			}
+		</script>
+
+</div>
+&nbsp|&nbsp<a href="https://f.wps.cn/form-write/EwnqruHV/ 邀你填写「关于素客网站满意度调查」" target="_blank">关于网站的评价</a>	
+&nbsp|&nbsp
+<a href="travel/index.html" target="_Blank"> 旅行官网（试行）</a>&nbsp&nbsp|&nbsp&nbsp
+<a href="website/about.html" target="_Blank">关于我们</a>&nbsp&nbsp|&nbsp&nbsp
+<a href=''>   </a>
+<script>
+    $(function() { 
+    $.get('update.php?id=1',{r:Math.random()}); 
+    }); 
+    </script>
+	</b>
+</center>
+</div>
+</font>
+</div>
+</b>
+</div>
+</div>
+</b>
+    </body>
+    
+    
+    </html>
